@@ -177,3 +177,41 @@ section.testimonials {
     color: whitesmoke;
     font-size: 15px;
 }
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    main h1 {
+        font-size: 2rem;
+    }
+    .pros {
+        flex-direction: column;
+    }
+    .free {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    main h1 {
+        font-size: 1.5rem;
+    }
+    .subpopular, .pros {
+        flex-direction: column;
+    }
+    #FAQ {
+        padding: 50px;
+    }
+    .footer {
+        padding: 30px;
+    }
+}
