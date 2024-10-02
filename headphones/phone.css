@@ -98,6 +98,34 @@ body {
     color: #555;
 }
 
+
+.description p[data-text] {
+    position: relative;
+    display: inline-block;
+}
+
+.description p[data-text]::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #1a1716; /* Starting color for the animation */
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.5s ease, color 0.5s ease;
+    z-index: 1;
+}
+
+.description p:hover[data-text]::before {
+    color: #4caf50; /* New color on hover */
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+
+
+
+
+
+
 .icons-container {
     display: flex;
     justify-content: center;
@@ -325,4 +353,16 @@ main button {
     .icon-item p {
         font-size: 0.9rem;
     }
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width:100%;
+    }
+
 }
